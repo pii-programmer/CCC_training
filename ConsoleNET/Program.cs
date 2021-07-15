@@ -4,16 +4,12 @@ class MyApp
 {
     static void Main()
     {
-        //整数値の型の種類
-        //byte, short, int, long
-        int i = 2147483647;
-        byte b = 225;
-        short s = 32767;
-        long l = 9223372036854775807;
+        //浮動小数点数を表す型の種類
+        //float, double
+        double d = 1.25;
+        float f = 1.25f;
 
-        Console.WriteLine(i);
-        Console.WriteLine(b);
-        Console.WriteLine(s);
-        Console.WriteLine(l);
+        Console.WriteLine(d);
+        Console.WriteLine(f);
     }
 }
