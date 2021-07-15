@@ -4,10 +4,10 @@ class MyApp
 {
     static void Main()
     {
-        //変数：値の再代入が可能
-        //定数：値の再代入が不可能
-        //　定数の定義は const 定数の型 定数の名 =  "値";
-        const string msg = "Hello World";
+        //文字列 string はダブルクオテーション
+        string s = "hello";
+        //文字 char はシングルクオテーション
+        char c = 'hello';
         Console.WriteLine(msg);
     }
 }
