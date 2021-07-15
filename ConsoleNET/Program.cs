@@ -4,12 +4,12 @@ class MyApp
 {
     static void Main()
     {
-        //浮動小数点数を表す型の種類
-        //float, double
-        double d = 1.25;
-        float f = 1.25f;
+        //論理値の型は
+        //bool
+        bool flagA = true;
+        bool flagB = false;
 
-        Console.WriteLine(d);
-        Console.WriteLine(f);
+        Console.WriteLine(flagA);
+        Console.WriteLine(flagB);
     }
 }
