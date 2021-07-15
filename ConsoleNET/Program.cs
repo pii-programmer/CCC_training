@@ -4,12 +4,8 @@ class MyApp
 {
     static void Main()
     {
-        //論理値の型は
-        //bool
-        bool flagA = true;
-        bool flagB = false;
-
-        Console.WriteLine(flagA);
-        Console.WriteLine(flagB);
+        // 型推論
+        var x = 5; // int
+        var y = "world"; // string
     }
 }
