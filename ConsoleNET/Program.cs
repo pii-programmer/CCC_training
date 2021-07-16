@@ -4,8 +4,9 @@ class MyApp
 {
     static void Main()
     {
-        Console.WriteLine("hell\nowo\trld");
-        // \n は改行
-        // \t は空白tab
+        var name = "taguchi";
+        var score = 52.3;
+        Console.WriteLine(string.Format("{0} [{1}]", name, score)); //taguchi [52.3]
+        Console.WriteLine($"{name} [{score}]"); //taguchi [52.3]
     }
 }
