@@ -4,6 +4,8 @@ class MyApp
 {
     static void Main()
     {
-     Console.WriteLine("hello" + "world"); // helloworld
+        Console.WriteLine("hell\nowo\trld");
+        // \n は改行
+        // \t は空白tab
     }
 }
