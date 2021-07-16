@@ -4,8 +4,9 @@ class MyApp
 {
     static void Main()
     {
-        var  z = 6; // int
-        z += 1;
-        Console.WriteLine(z); // 7
+        // AND OR NOT
+        // &&  || !
+        var flag = true;
+        Console.WriteLine(!flag); // Faulse
     }
 }
