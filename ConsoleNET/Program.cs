@@ -4,10 +4,8 @@ class MyApp
 {
     static void Main()
     {
-        var  y = 5; // int
-        y++;
-        Console.WriteLine(y); // 6
-        y--;
-        Console.WriteLine(y); // 4
+        var  z = 6; // int
+        z += 1;
+        Console.WriteLine(z); // 7
     }
 }
