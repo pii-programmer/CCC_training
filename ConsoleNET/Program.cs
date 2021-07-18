@@ -1,14 +1,19 @@
-﻿using System;
+﻿ using System;
 
 class MyApp
 {
     static void Main()
     {
-        var name = "taguchi";
-        var score = 52.3;
-        Console.WriteLine($"{name, 10} [{score, 10}]");             //10桁で表示する。右詰。
-        Console.WriteLine($"{name, -10} [{score, -10}]");           //10桁で表示する。左詰。
-        Console.WriteLine($"{name, -10} [{score, 10:0.00}]");       //10桁で表示する。浮動小数点。
-        Console.WriteLine($"{name, -10} [{score + 25, 10:0.00}]");  //演算もできる。
+        //ユーザーから入力を受け取る＝ Console.ReadLine
+        //入力された値は整数型で受け取りたいので＝ int.Parse()
+        var score = int.Parse(Console.ReadLine());
+        if (score > 80)
+        {
+            Console.WriteLine("Great!");
+        } else if (score > 60) {
+            Console.WriteLine("Good!");
+        } else {
+            Console.WriteLine("so so...");
+        }
     }
 }
