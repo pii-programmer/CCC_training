@@ -4,16 +4,10 @@ class MyApp
 {
     static void Main()
     {
-        //ユーザーから入力を受け取る＝ Console.ReadLine
-        //入力された値は整数型で受け取りたいので＝ int.Parse()
+        //まず関数 score を定義する。
         var score = int.Parse(Console.ReadLine());
-        if (score > 80)
-        {
-            Console.WriteLine("Great!");
-        } else if (score > 60) {
-            Console.WriteLine("Good!");
-        } else {
-            Console.WriteLine("so so...");
-        }
+        //if文の省略した書き方
+        Console.WriteLine((score > 80) ? "Great" : "so so...");
+        //Console.WriteLine((条件式)? "条件式がTrueならA" ："FalseならBと表示する");
     }
 }
