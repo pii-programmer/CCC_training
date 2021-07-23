@@ -4,11 +4,16 @@ class MyApp
 {
     static void Main()
     {
-        // each文＝ for文
-        //for(変数を定義; 条件式; 繰り返すために+1する){処理}
+        //for文
+        // continue その条件だけ処理を中止して次のループへ
+        // 結果は「0 1 2 3 4 6 7 8 9」
         for (var i = 0; i < 10; i++) {
+            if (i == 5)
+            {
+                continue;
+            }
             Console.WriteLine(i);
         }
 
     }
-} 
+}
