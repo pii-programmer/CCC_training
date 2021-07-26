@@ -8,8 +8,10 @@ class MyApp
         
         var scores = new [] { 10, 30, 20 };
 
-        //変数の中身の上書きもできる
-        scores[1] = 40;
-        Console.WriteLine(scores[1]);
+        //for文：配列の 0~2 番を繰り返し表示する
+        for (int i = 0; i < scores.Length; i++)
+        {
+            Console.WriteLine(scores[i]);
+        }
     }
 }
