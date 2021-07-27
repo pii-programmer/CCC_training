@@ -2,13 +2,13 @@
 
 class MyApp
 {
-    static void SayHi()
+    static string SayHi()
     {
-        Console.WriteLine("hi!");
+        return "hi!";
     }
     static void Main()
     {
-        //メソッド＝処理をまとめる
-        SayHi();
+        //メソッドの別の書き方
+        Console.WriteLine(SayHi());
     }
 }
