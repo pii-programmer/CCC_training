@@ -1,12 +1,18 @@
 ﻿using System;
 
-// classの作り方
-// 変数（フィールド）とメソッドを定義する
-// this.変数名 でメソッドからフィールドにアクセスすることもできる
+// class
+// コンストラクタを使う
+// コンストラクタはインスタンスを作る時に必ず呼ばれるメソッドである
+// コンストラクタはクラスと同名のメソッドを定義してあげる
 
 class User
 {
-    public string name = "me";
+    public string name;
+    public User()                     //これがコンストラクタ
+    {
+        // ここにクラスと同名のメソッドを定義してあげる
+        this.name = "ME";
+    }
     public void SayHi()
     {
         Console.Write($"Hi! {this.name}");
@@ -19,9 +25,6 @@ class MyApp
     static void Main()
     {
         User user = new User();       // User classのインスタンス userを生成
-        Console.WriteLine(user.name); // 生成したインスタンス userの中の nameの値を取ってくる。結果は me
-        user.SayHi();                 // Hi! me
-        user.name = "taguchi";        // userインスタンスの nameを"taguchi"に上書きする
-        user.SayHi();                 // Hi! taguchi
+        user.SayHi();                 // Hi! ME
     }
 }
