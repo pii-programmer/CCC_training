@@ -1,17 +1,27 @@
-﻿ using System;
+﻿using System;
 
+// classの作り方
+// 変数（フィールド）とメソッドを定義する
+// this.変数名 でメソッドからフィールドにアクセスすることもできる
+
+class User
+{
+    public string name = "me";
+    public void SayHi()
+    {
+        Console.Write($"Hi! {this.name}");
+    }
+}
+
+// 上記で定義した User classを MyApp classで使う
 class MyApp
 {
-    static void SayHi(string name, int age = 23)  //（型　引数）複数の引数でもOK。定義されていない引数の場合、初期値を与えることもできる。
-    {
-        Console.WriteLine($"hi! {name}({age})");
-    }
-
     static void Main()
     {
-        //別のクラスに引数として渡す時
-        SayHi("Tom");                   //結果は hi! Tom(23)
-        SayHi("Bob", 30);               //結果は hi! Bob(30)
-        SayHi(age: 26, name: "Steve");  //結果は hi! Steve(26) 変数に代入して引数を渡すこともできる。
+        User user = new User();       // User classのインスタンス userを生成
+        Console.WriteLine(user.name); // 生成したインスタンス userの中の nameの値を取ってくる。結果は me
+        user.SayHi();                 // Hi! me
+        user.name = "taguchi";        // userインスタンスの nameを"taguchi"に上書きする
+        user.SayHi();                 // Hi! taguchi
     }
 }
