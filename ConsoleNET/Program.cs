@@ -8,10 +8,10 @@
 class User
 {
     public string name;
-    public User()                     //これがコンストラクタ
+    public User(string name)                     //これがコンストラクタ
     {
-        // ここにクラスと同名のメソッドを定義してあげる
-        this.name = "ME";
+        // User classの外から値が渡ってきた（Tom）
+        this.name = name;
     }
     public void SayHi()
     {
@@ -19,12 +19,12 @@ class User
     }
 }
 
-// 上記で定義した User classを MyApp classで使う
+// User classの外である MyApp classから、User classへ値を渡すこともできる
 class MyApp
 {
     static void Main()
     {
-        User user = new User();       // User classのインスタンス userを生成
-        user.SayHi();                 // Hi! ME
+        User tom = new User("Tom");  // User classのインスタンス tomを生成
+        tom.SayHi();                 // Hi! Tom
     }
 }
