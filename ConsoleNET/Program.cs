@@ -13,6 +13,10 @@ class User
         // User classの外から値が渡ってきた（Tom）
         this.name = name;
     }
+    public User()                   　　　　　　   //コンストラクタへクラス外から値が渡って来なかったら
+    {
+        this.name = "nobody";                    //"nobody"と表示してみる。このように同名のコンストラクタやメソッドを定義することをオーバーロードと言う。
+    }
     public void SayHi()
     {
         Console.Write($"Hi! {this.name}");
@@ -26,5 +30,7 @@ class MyApp
     {
         User tom = new User("Tom");  // User classのインスタンス tomを生成
         tom.SayHi();                 // Hi! Tom
+        User user = new User();
+        user.SayHi();                // Hi! nobody
     }
 }
