@@ -13,9 +13,7 @@ class User
         // User classの外から値が渡ってきた（Tom）
         this.name = name;
     }
-    public User()                   　　　　　　   //コンストラクタへクラス外から値が渡って来なかったら
-    {
-        this.name = "nobody";                    //"nobody"と表示してみる。このように同名のコンストラクタやメソッドを定義することをオーバーロードと言う。
+    public User():this ("nobody"){               //オーバーロードの別の書き方。上のコンストラクタに"nobody"を渡してあげるのと同じ。
     }
     public void SayHi()
     {
