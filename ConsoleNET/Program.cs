@@ -10,6 +10,8 @@ class MyApp
     static void Main()
     {
         //別のクラスに引数として渡す時
-        SayHi("Tom");
+        SayHi("Tom");                   //結果は hi! Tom(23)
+        SayHi("Bob", 30);               //結果は hi! Bob(30)
+        SayHi(age: 26, name: "Steve");  //結果は hi! Steve(26) 変数に代入して引数を渡すこともできる。
     }
 }
