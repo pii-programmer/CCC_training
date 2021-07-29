@@ -37,9 +37,10 @@ class MyApp
     static void Main()
     {
         User tom = new User("Tom");              // User classのインスタンス tomを生成
-        tom.SayHi();                             // Hi! Tom
+        Console.WriteLine(tom.name);             // 結果は Tom     アクセス修飾子がpublicだから
+        tom.SayHi();                             // 結果は Hi! Tom
         AdminUser bob = new AdminUser("Bob");    // AdminUser classのインスタンス bobを生成
-        bob.SayHi();                             // Hi! Bob
-        bob.SayHello();                          // Hello! Bob
+        bob.SayHi();                             // 結果は [admin] Hi! Bob
+        bob.SayHello();                          // 結果は Hello! Bob
     }
 }
