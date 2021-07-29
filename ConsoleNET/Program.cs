@@ -5,7 +5,7 @@
 
 class User                                       //これが親クラス
 {
-    public string name;
+    protected string name;
     public User(string name)                     //これが親クラスのコンストラクタ
     {
         // User classの外から値が渡ってきた（Tom）
@@ -37,7 +37,7 @@ class MyApp
     static void Main()
     {
         User tom = new User("Tom");              // User classのインスタンス tomを生成
-        Console.WriteLine(tom.name);             // 結果は Tom     アクセス修飾子がpublicだから
+        Console.WriteLine(tom.name);             // 結果は エラー    アクセス修飾子がprotectedだから
         tom.SayHi();                             // 結果は Hi! Tom
         AdminUser bob = new AdminUser("Bob");    // AdminUser classのインスタンス bobを生成
         bob.SayHi();                             // 結果は [admin] Hi! Bob
