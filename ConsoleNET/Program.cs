@@ -2,14 +2,15 @@
 
 class User
 {
-    private string name = "me!";
-    // ↑セオリーとしては、安全性を考えてprivate, protectedのように必要な時だけアクセスできるアクセス修飾子にする。
-    // ↓クラス外からアクセスしたい場合は、プロパティを持つことができる。これはC#の特徴。
-    public string Name                      // これがフィールド
-    {
-        get { return this.name; }   // これが getter
-        set { this.name = value; }  // これが setter
-    }
+    //private string name = "me!";
+    //public string Name
+    //{
+    //    get { return this.name; }
+    //    set { this.name = value; }
+    //}
+
+    // プロパティを一文で書く方法
+    public string Name = { get; set;} = "me!";
 }
 
 class MyApp
