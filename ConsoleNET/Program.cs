@@ -1,31 +1,26 @@
 ﻿using System;
 
-class User
-{
-    private string name = "me!";
-    public string Name
-    {
-        get { return this.name; }
-        set {
-            if (value != "")
-            {
-                this.name = value;
-            }
-        }
-            
-    }
-
-}
-
 class MyApp
 {
+    //インデクサとは
+    //クラスに対してインスタンスを生成する時、配列と同じようにインデックスを作成できること。
+
+    class Team
+    {
+        private string[] members = new string[3];
+        public string this[int i]
+        {
+            get { return this.members[i]; }
+            set { this.members[i] = value; }
+        }
+    }
+
     static void Main()
     {
-        User user = new User();              // User classのインスタンス userを生成。
-        Console.WriteLine(user.Name);        // 結果は me! なぜならgetterだから。
-        user.Name = "taguchi";
-        Console.WriteLine(user.Name);        // 結果は taguchi なぜならsetterだから。
-        user.Name = "";                      // 空ではない時だけ表示する処理にしてるので、空の時は
-        Console.WriteLine(user.Name);        // 結果は taguchiのままになってくれる。
+        Team giants = new Team();      // Team というクラスに giantsというインスタンスを生成
+        giants[0] = "taguchi";
+        giants[1] = "fkoji";
+        giants[2] = "dotinstall";
+        Console.WriteLine(giants[1]);  // 結果は fkoji
     }
 }
