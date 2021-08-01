@@ -7,8 +7,8 @@ class User
     // ↓クラス外からアクセスしたい場合は、プロパティを持つことができる。これはC#の特徴。
     public string Name                      // これがフィールド
     {
-        get { return this.name; }
-        set { this.name = value; }
+        get { return this.name; }   // これが getter
+        set { this.name = value; }  // これが setter
     }
 }
 
