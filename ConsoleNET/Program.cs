@@ -2,24 +2,30 @@
 
 class User
 {
-    //private string name = "me!";
-    //public string Name
-    //{
-    //    get { return this.name; }
-    //    set { this.name = value; }
-    //}
+    private string name = "me!";
+    public string Name
+    {
+        get { return this.name; }
+        set {
+            if (value != "")
+            {
+                this.name = value;
+            }
+        }
+            
+    }
 
-    // プロパティを一文で書く方法
-    public string Name = { get; set;} = "me!";
 }
 
 class MyApp
 {
     static void Main()
     {
-        User user = new User();              // User classのインスタンス userを生成
-        Console.WriteLine(user.Name);        // 結果は me! なぜならgetだから
+        User user = new User();              // User classのインスタンス userを生成。
+        Console.WriteLine(user.Name);        // 結果は me! なぜならgetterだから。
         user.Name = "taguchi";
-        Console.WriteLine(user.Name);        // 結果は taguchi なぜならsetだから
+        Console.WriteLine(user.Name);        // 結果は taguchi なぜならsetterだから。
+        user.Name = "";                      // 空ではない時だけ表示する処理にしてるので、空の時は
+        Console.WriteLine(user.Name);        // 結果は taguchiのままになってくれる。
     }
 }
